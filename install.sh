@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILES_DIR="$HOME/.config/dotfile-wayland"
+DOTFILES_DIR="$HOME/.config/dotfiles"
 LOCAL_CONFIG_DIR="$HOME/.config"
 LOCAL_BIN_DIR="$HOME/.local/bin"
 
