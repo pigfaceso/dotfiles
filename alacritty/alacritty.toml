@@ -1,0 +1,26 @@
+[colors.cursor]
+cursor = "#bdfe58"
+
+[colors.primary]
+background = "#1c1c1c"
+foreground = "#c0c0c0"
+
+[terminal]
+shell = { program = "/bin/bash", args = ["-l"] }
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14
+
+[font.normal]
+family = "AdwaitaMono Nerd Font"
+style = "Regular"
+
+[window]
+decorations_theme_variant = "Dark"
+
+[window.padding]
+x = 2
+y = 2

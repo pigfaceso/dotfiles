@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+
+VERSION=0.1.0
+WORK_DIR=(
+  ~/workspace:2
+  ~/.config:1
+)
+MAX_DEPTH=1
+
+function check_require_tool() {
+  if [[ -z $(command -v tmux) ]]; then
+    echo "tmux-sessionizer: tmux is not installed"
+    exit -1
+  fi
+  if [[ -z $(command -v fzf) ]]; then
+    echo "tmux-sessionizer: fzf is not installed"
+    exit -1
+  fi
+}
+
+function find_dir() {
+  # list TMUX sessions
+  if [[ -n "${TMUX}" ]]; then
+    current_session=$(tmux display-message -p '#S')
+    tmux list-sessions -F "[S] #{session_name}" 2>/dev/null | grep -vFx "[S] $current_session"
+  else
+    tmux list-sessions -F "[S] #{session_name}" 2>/dev/null
+  fi
+
+  for entry in "${WORK_DIR[@]}"; do
+    # Check if entry as :number as suffix then adapt the maxdepth parameter
+    if [[ "$entry" =~ ^([^:]+):([0-9]+)$ ]]; then
+      path="${BASH_REMATCH[1]}"
+      depth="${BASH_REMATCH[2]}"
+    else
+      path="$entry"
+    fi
+
+    [[ -d "$path" ]] && find "$path" -mindepth 1 -maxdepth "${depth:-${MAX_DEPTH:-1}}" -path '*/.git' -prune -o -type d -print
+
+  done
+}
+
+function main() {
+
+  check_require_tool
+
+  if [[ $# -gt 0 ]]; then
+    echo "tmux-sesionizer: no arguments"
+    exit 0
+  else
+    selected=$(find_dir | sed "s|^$HOME/||" | fzf --prompt "(tmux-sesionizer) ")
+  fi
+
+  if [[ -z $selected ]]; then
+    exit 0
+  fi
+
+  if [[ "$selected" =~ ^\[S\]\ (.+)$ ]]; then
+    selected="${BASH_REMATCH[1]}"
+  fi
+
+  fullpath_selected="$HOME/$selected"
+  selected_name=$(basename "$fullpath_selected" | tr . _)
+  tmux_running=$(pgrep tmux)
+
+  if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s $selected_name -c $fullpath_selected
+    exit 0
+  fi
+
+  if ! tmux has-session -t=$selected_name 2>/dev/null; then
+    tmux new-session -ds $selected_name -c $fullpath_selected
+  fi
+
+  if [[ -z $TMUX ]]; then
+    tmux attach -t $selected_name
+  else
+    tmux switch-client -t $selected_name
+  fi
+}
+
+main "$@"

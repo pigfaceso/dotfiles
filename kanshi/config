@@ -1,0 +1,8 @@
+profile default {
+  output eDP-1 enable
+}
+
+profile presentation {
+  output eDP-1 enable
+  output HDMI-1 enable
+}

@@ -1,0 +1,56 @@
+configuration {
+  font: "mono 12";
+  modes: "window,run,drun,combi,ssh";
+  case-sensitive: false;
+  case-smart: true;
+  show-icons: false;
+}
+
+@theme "/dev/null"
+
+* {
+  background-color: #323232;
+  border-color: #ffffff;
+  text-color: #ffffff;
+}
+
+window {
+  anchor: north;
+  location: north;
+  width: 100%;
+  padding: 1px;
+  children: [horibox];
+}
+
+horibox {
+  orientation: horizontal;
+  children: [prompt, entry, listview];
+}
+
+prompt {
+  background-color: #4c7899;
+}
+
+listview {
+  layout: horizontal;
+  spacing: 5px;
+  lines: 100;
+}
+
+entry {
+  expand: false;
+  width: 10em;
+}
+
+element {
+  padding: 0px 2px;
+}
+
+element selected {
+  background-color: #4c7899;
+}
+
+element-text, element-icon {
+  background-color: inherit;
+  text-color: inherit;
+}
