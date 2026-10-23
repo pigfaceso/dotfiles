@@ -1,24 +1,25 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 LOCAL_CONFIG_DIR="$HOME/.config"
 LOCAL_BIN_DIR="$HOME/.local/bin"
 
 # Local binary/script path
-rm $LOCAL_BIN_DIR/tmux-sessionizer
-rm $LOCAL_BIN_DIR/tmux-start
+unlink $LOCAL_BIN_DIR/tmux-sessionizer
+unlink $LOCAL_BIN_DIR/tmux-start
 
 # Home path
-rm $HOME/.git-prompt.sh
-rm $HOME/.bash_profile
-rm $HOME/.bashrc
-rm $HOME/.nnn
+unlink $HOME/.git-prompt.sh
+unlink $HOME/.bash_profile
+unlink $HOME/.bashrc
+unlink $HOME/.nnn
 
 # Config path
-rm $LOCAL_CONFIG_DIR/sway
-rm $LOCAL_CONFIG_DIR/waybar
-rm $LOCAL_CONFIG_DIR/dunst
-rm $LOCAL_CONFIG_DIR/alacritty
-rm $LOCAL_CONFIG_DIR/foot
-rm $LOCAL_CONFIG_DIR/rofi
-rm $LOCAL_CONFIG_DIR/tmux
-rm $LOCAL_CONFIG_DIR/nvim
+unlink $LOCAL_CONFIG_DIR/sway
+unlink $LOCAL_CONFIG_DIR/waybar
+unlink $LOCAL_CONFIG_DIR/dunst
+unlink $LOCAL_CONFIG_DIR/alacritty
+unlink $LOCAL_CONFIG_DIR/foot
+unlink $LOCAL_CONFIG_DIR/rofi
+unlink $LOCAL_CONFIG_DIR/tmux
+unlink $LOCAL_CONFIG_DIR/nvim
+unlink $LOCAL_CONFIG_DIR/nnn/nnn.conf

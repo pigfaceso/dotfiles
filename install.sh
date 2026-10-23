@@ -12,7 +12,6 @@ ln -s $DOTFILES_DIR/scripts/tmux-start $LOCAL_BIN_DIR
 ln -s $DOTFILES_DIR/bash/.git-prompt.sh $HOME
 ln -s $DOTFILES_DIR/bash/.bash_profile $HOME
 ln -s $DOTFILES_DIR/bash/.bashrc $HOME
-ln -s $DOTFILES_DIR/nnn $HOME/.nnn
 
 # Config path
 ln -s $DOTFILES_DIR/sway $LOCAL_CONFIG_DIR
@@ -23,3 +22,4 @@ ln -s $DOTFILES_DIR/foot $LOCAL_CONFIG_DIR
 ln -s $DOTFILES_DIR/rofi $LOCAL_CONFIG_DIR
 ln -s $DOTFILES_DIR/tmux $LOCAL_CONFIG_DIR
 ln -s $DOTFILES_DIR/nvim $LOCAL_CONFIG_DIR
+ln -s $DOTFILES_DIR/nnn/nnn.conf $LOCAL_CONFIG_DIR/nnn
