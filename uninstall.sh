@@ -23,3 +23,4 @@ unlink $LOCAL_CONFIG_DIR/rofi
 unlink $LOCAL_CONFIG_DIR/tmux
 unlink $LOCAL_CONFIG_DIR/nvim
 unlink $LOCAL_CONFIG_DIR/nnn/nnn.conf
+unlink $LOCAL_CONFIG_DIR/nnn/plugins
