@@ -66,6 +66,8 @@ exec swayidle -w \
   input type:keyboard {
       xkb_layout "us,th"
       xkb_options "grp:caps_toggle"
+      repeat_delay 200
+      repeat_rate 50
   }
 #
 # You can also configure each device individually.
@@ -270,3 +272,4 @@ include /etc/sway/config.d/*
 exec kanshi
 exec dunst
 exec nm-applet
+exec udisk-automount

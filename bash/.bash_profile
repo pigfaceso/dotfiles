@@ -17,6 +17,7 @@ export HISTCONTROL="erasedups:ignoreboth"
 export HISTFILESIZE=-1
 export HISTSIZE=-1
 export HISTIGNORE="..:...:....:pwd:ls:l:cd:clear:exit:history:hostname:date:vi:vim:nvim:make:tmux-sessionizer"
+export SUDO_EDITOR=vi
 export EDITOR=nvim
 export VISUAL=nvim
 export WWW_HOME="https://lite.duckduckgo.com/lite/"
