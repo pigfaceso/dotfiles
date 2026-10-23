@@ -1,9 +1,11 @@
 configuration {
   font: "mono 12";
   modes: "window,run,drun,combi,ssh";
+  matching: "prefix";
   case-sensitive: false;
   case-smart: true;
   show-icons: false;
+  terminal: "alacritty";
 }
 
 @theme "/dev/null"

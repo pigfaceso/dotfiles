@@ -16,12 +16,11 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-# set $term alacritty
-set $term foot
+set $term alacritty
+# set $term foot
 
 # Your preferred application launcher
 set $menu rofi -show combi -combi-modes "run,drun,ssh"
-# set $menu rofi -show run
 # set $menu wmenu-run
 
 # Layouy default
@@ -30,7 +29,8 @@ workspace_layout tabbed
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
 #
 # Example configuration:
 #
@@ -58,6 +58,7 @@ exec swayidle -w \
   input type:touchpad {
       dwt enabled
       tap enabled
+      tap_button_map lrm
       natural_scroll enabled
       middle_emulation enabled
   }
@@ -90,6 +91,10 @@ exec swayidle -w \
     # mouse button for dragging.
     floating_modifier $mod normal
 
+    # toggle bar visible
+    # bindsym $mod+Shift+b bar mode toggle
+    bindsym $mod+Shift+b exec pkill -SIGUSR1 waybar
+
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
@@ -100,8 +105,17 @@ exec swayidle -w \
       -t warning \
       -m 'What do you want to do?' \
       -B 'Exit' 'swaymsg exit' \
-      -b 'Poweroff' 'systemctl poweroff' \
-      -b 'Reboot' 'systemctl reboot'
+      -B 'Poweroff' 'poweroff' \
+      -B 'Reboot' 'reboot' \
+      -B 'Suspend' 'systemctl suspend' \
+      -B 'Hibernate' 'systemctl hibernate'
+
+      # Grimshot
+      bindsym $mod+p       exec grimshot savecopy active
+      bindsym $mod+Shift+p exec grimshot savecopy area
+      bindsym $mod+Ctrl+p  exec grimshot savecopy window
+      bindsym $mod+Mod1+p  exec grimshot savecopy output
+
 
 # Moving around:
 #
@@ -226,9 +240,10 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grimshot
-    bindsym Print exec grimshot save output
-    bindsym Shift+Print exec grimshot save active
-    bindsym Ctrl+Print exec grimshot save area
+    bindsym Print+p       exec grimshot savecopy active
+    bindsym Print+Shift+p exec grimshot savecopy area
+    bindsym Print+Ctrl+p  exec grimshot savecopy window
+    bindsym Print+Mod1+p  exec grimshot savecopy output
 
 
 #
@@ -238,16 +253,15 @@ bindsym $mod+r mode "resize"
 bar swaybar_command waybar
 # bar {
 #     position top
-#
-#     # When the status_command prints a new line to stdout, swaybar updates.
-#     # The default just shows the current date and time.
-#     status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-#
+#     status_command /usr/local/bin/sway-bar.sh
 #     colors {
 #         statusline #ffffff
 #         background #323232
 #         inactive_workspace #32323200 #32323200 #5c5c5c
 #     }
+#     tray_bindsym button1 Activate
+#     tray_bindsym button3 ContextMenu
+#     tray_bindsym button2 SecondaryActivate
 # }
 
 include /etc/sway/config.d/*
