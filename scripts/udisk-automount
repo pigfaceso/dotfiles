@@ -7,10 +7,11 @@ pathtoname() {
 stdbuf -oL -- udevadm monitor --udev -s block | while read -r -- _ _ event devpath _; do
         if [ "$event" = add ]; then
             devname=$(pathtoname "$devpath")
-            udisksctl mount --block-device "$devname" --no-user-interaction
+            MOUNT_PATH=$(udisksctl mount --block-device "$devname" --no-user-interaction | awk '/Mounted/ {print $4}')
 
-            if [ $? -eq 0 ]; then
-              notify-send -a udisk-automount "Mount $devname" "Mounted to /run/media/$USER/$(ls /run/media/$USER -t -1 | head -1)"
+            if [ -n "${MOUNT_PATH}" ]; then
+              echo $MOUNT_PATH
+              notify-send -a udisk-automount "Mount $devname" "Mounted to ${MOUNT_PATH}"
             fi
         fi
 done
