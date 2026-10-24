@@ -2,13 +2,15 @@
 [[ $- == *i* ]] || return
 
 # Source file
-
 [[ -f /etc/bashrc ]] && source /etc/bashrc
 [[ -f $HOME/.git-prompt.sh ]] && source $HOME/.git-prompt.sh
+set -o allexport
+[[ -f $HOME/.api-keys ]] && source $HOME/.api-keys
 [[ -f $HOME/.config/nnn/nnn.conf ]] && source $HOME/.config/nnn/nnn.conf
+set +o allexport
+[[ -n $(command -v direnv) ]] && eval "$(direnv hook bash)"
 [[ -n $(command -v fzf) ]] && eval "$(fzf --bash)"
 [[ -n $(command -v zoxide) ]] && eval "$(zoxide init --cmd cd bash)"
-
 
 # Disable Ctrl-s, Crtl-q default keybind (stop,resume)
 stty -ixon

@@ -1,0 +1,5 @@
+_JAVA_AWT_WM_NONREPARENTING=1
+SUDO_EDITOR=vi
+EDITOR=nvim
+VISUAL=nvim
+WWW_HOME="https://lite.duckduckgo.com/lite/"

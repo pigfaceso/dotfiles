@@ -23,3 +23,12 @@ export VISUAL=nvim
 export WWW_HOME="https://lite.duckduckgo.com/lite/"
 
 # [[ -f $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh ]] && source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+
+# Auto-launch Sway on TTY1 login
+# if [ "$(tty)" = "/dev/tty1" ]; then
+#     read -p "Start Sway? [y]es or [n]o: " -n 1 -r
+#     echo
+#     if [[ $REPLY =~ ^[Yy]$ ]]; then
+#         exec start-sway
+#     fi
+# fi

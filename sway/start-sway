@@ -5,6 +5,11 @@ export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_DESKTOP=sway
 export XDG_SESSION_TYPE=wayland
 
-export _JAVA_AWT_WM_NONREPARENTING=1
+## user environment
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/sway/environment" ]; then
+    set -o allexport
+    source "${XDG_CONFIG_HOME:-$HOME/.config}/sway/environment"
+    set +o allexport
+fi
 
-exec sway
+exec /usr/bin/sway

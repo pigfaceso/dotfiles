@@ -113,10 +113,10 @@ exec swayidle -w \
       -B 'Hibernate' 'systemctl hibernate'
 
       # Grimshot
-      bindsym $mod+p       exec grimshot savecopy active
-      bindsym $mod+Shift+p exec grimshot savecopy area
-      bindsym $mod+Ctrl+p  exec grimshot savecopy window
-      bindsym $mod+Mod1+p  exec grimshot savecopy output
+      bindsym $mod+p       exec grimshot --notify savecopy active
+      bindsym $mod+Shift+p exec grimshot --notify savecopy area
+      bindsym $mod+Ctrl+p  exec grimshot --notify savecopy window
+      bindsym $mod+Mod1+p  exec grimshot --notify savecopy output
 
 
 # Moving around:
@@ -242,10 +242,10 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grimshot
-    bindsym Print+p       exec grimshot savecopy active
-    bindsym Print+Shift+p exec grimshot savecopy area
-    bindsym Print+Ctrl+p  exec grimshot savecopy window
-    bindsym Print+Mod1+p  exec grimshot savecopy output
+    bindsym Print+p       exec grimshot --notify savecopy active
+    bindsym Print+Shift+p exec grimshot --notify savecopy area
+    bindsym Print+Ctrl+p  exec grimshot --notify savecopy window
+    bindsym Print+Mod1+p  exec grimshot --notify savecopy output
 
 
 #
@@ -269,6 +269,7 @@ bar swaybar_command waybar
 include /etc/sway/config.d/*
 
 # Start app
+exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
 exec kanshi
 exec dunst
 exec nm-applet
