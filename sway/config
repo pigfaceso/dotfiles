@@ -97,6 +97,12 @@ exec swayidle -w \
     # bindsym $mod+Shift+b bar mode toggle
     bindsym $mod+Shift+b exec pkill -SIGUSR1 waybar
 
+    # NetworkManager
+    bindsym $mod+n exec alacritty --title nmtui --class float-term -e nmtui
+
+    # Sound
+    bindsym $mod+m exec alacritty --title alsamixer --class float-term -e alsamixer
+
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
@@ -265,6 +271,11 @@ bar swaybar_command waybar
 #     tray_bindsym button3 ContextMenu
 #     tray_bindsym button2 SecondaryActivate
 # }
+
+# Rules
+for_window [app_id="float-term"] {
+  floating enable
+}
 
 include /etc/sway/config.d/*
 
