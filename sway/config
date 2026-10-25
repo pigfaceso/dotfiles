@@ -16,9 +16,9 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-# set $term alacritty
+set $term alacritty
 # set $term foot
-set $term ghostty
+# set $term ghostty
 
 # Your preferred application launcher
 set $menu rofi -show combi -combi-modes "window,run,drun,ssh"
@@ -246,10 +246,10 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grimshot
-    bindsym Print+p       exec grimshot --notify savecopy active
-    bindsym Print+Shift+p exec grimshot --notify savecopy area
-    bindsym Print+Ctrl+p  exec grimshot --notify savecopy window
-    bindsym Print+Mod1+p  exec grimshot --notify savecopy output
+    bindsym Print exec grimshot --notify savecopy active
+    bindsym Shift+Print exec grimshot --notify savecopy area
+    bindsym Ctrl+Print exec grimshot --notify savecopy window
+    bindsym Mod1+Print exec grimshot --notify savecopy output
 
 
 #

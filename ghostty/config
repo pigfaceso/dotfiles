@@ -1,11 +1,8 @@
-## Fedora: Ghostty install
-# dnf copr enable scottames/ghostty
-# dnf install ghostty
-
 theme = Tomorrow Night
 shell-integration = none
 bell-features = no-system
-font-family = Noto Sans Thai
+font-family = AdwaitaMono Nerd Font
+# font-family = Noto Sans Thai
 font-size = 14
 cursor-style = block
 cursor-style-blink = false
