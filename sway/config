@@ -16,8 +16,8 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term alacritty
-# set $term foot
+# set $term alacritty
+set $term foot
 
 # Your preferred application launcher
 set $menu rofi -show combi -combi-modes "run,drun,ssh"
@@ -97,11 +97,8 @@ exec swayidle -w \
     # bindsym $mod+Shift+b bar mode toggle
     bindsym $mod+Shift+b exec pkill -SIGUSR1 waybar
 
-    # NetworkManager
-    bindsym $mod+n exec alacritty --title nmtui --class float-term -e nmtui
-
     # Sound
-    bindsym $mod+m exec alacritty --title alsamixer --class float-term -e alsamixer
+    bindsym $mod+m exec foot --title alsamixer --class float-term -e alsamixer
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -275,6 +272,7 @@ bar swaybar_command waybar
 # Rules
 for_window [app_id="float-term"] {
   floating enable
+  move position center
 }
 
 include /etc/sway/config.d/*
