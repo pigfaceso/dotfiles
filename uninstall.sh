@@ -20,6 +20,7 @@ unlink $LOCAL_CONFIG_DIR/dunst
 unlink $LOCAL_CONFIG_DIR/alacritty
 unlink $LOCAL_CONFIG_DIR/foot
 unlink $LOCAL_CONFIG_DIR/rofi
+unlink $LOCAL_CONFIG_DIR/lazygit
 unlink $LOCAL_CONFIG_DIR/tmux
 unlink $LOCAL_CONFIG_DIR/nvim
 unlink $LOCAL_CONFIG_DIR/nnn/nnn.conf
