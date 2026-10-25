@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 DOTFILES_DIR="$HOME/.config/dotfiles"
 LOCAL_CONFIG_DIR="$HOME/.config"

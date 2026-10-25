@@ -20,10 +20,10 @@ set $right l
 set $term foot
 
 # Your preferred application launcher
-set $menu rofi -show combi -combi-modes "run,drun,ssh"
+set $menu rofi -show combi -combi-modes "window,run,drun,ssh"
 # set $menu wmenu-run
 
-# Layouy default
+# Layout default
 workspace_layout tabbed
 
 ### Output configuration

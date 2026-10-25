@@ -5,6 +5,8 @@ configuration {
   case-sensitive: false;
   case-smart: true;
   show-icons: false;
+  window-format: "{c} {t}";
+  window-match-fields: "title";
   terminal: "alacritty";
 }
 
