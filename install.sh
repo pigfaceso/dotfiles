@@ -25,3 +25,4 @@ ln -s $DOTFILES_DIR/tmux $LOCAL_CONFIG_DIR
 ln -s $DOTFILES_DIR/nvim $LOCAL_CONFIG_DIR
 ln -s $DOTFILES_DIR/nnn/nnn.conf $LOCAL_CONFIG_DIR/nnn
 ln -s $DOTFILES_DIR/nnn/plugins $LOCAL_CONFIG_DIR/nnn
+ln -s $DOTFILES_DIR/kew/kewrc $LOCAL_CONFIG_DIR/kew

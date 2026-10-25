@@ -25,3 +25,4 @@ unlink $LOCAL_CONFIG_DIR/tmux
 unlink $LOCAL_CONFIG_DIR/nvim
 unlink $LOCAL_CONFIG_DIR/nnn/nnn.conf
 unlink $LOCAL_CONFIG_DIR/nnn/plugins
+unlink $LOCAL_CONFIG_DIR/kew/kewrc
