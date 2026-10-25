@@ -18,6 +18,7 @@ unlink $LOCAL_CONFIG_DIR/sway
 unlink $LOCAL_CONFIG_DIR/waybar
 unlink $LOCAL_CONFIG_DIR/dunst
 unlink $LOCAL_CONFIG_DIR/alacritty
+unlink $LOCAL_CONFIG_DIR/ghostty
 unlink $LOCAL_CONFIG_DIR/foot
 unlink $LOCAL_CONFIG_DIR/rofi
 unlink $LOCAL_CONFIG_DIR/lazygit
