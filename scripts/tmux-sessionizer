@@ -49,7 +49,7 @@ function main() {
     echo "tmux-sesionizer: no arguments"
     exit 0
   else
-    selected=$(find_dir | sed "s|^$HOME/||" | fzf --prompt "(tmux-sesionizer) ")
+    selected=$(find_dir | sed "s|^$HOME/||" | fzf --prompt "(tmux-sesionizer)> ")
   fi
 
   if [[ -z $selected ]]; then
