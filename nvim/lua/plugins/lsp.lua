@@ -39,6 +39,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.cmd.file()
     end, { desc = 'Definition (vim.lsp)'})
 
+    vim.keymap.set({'n','v'}, '<leader>lc', function()
+      vim.lsp.buf.code_action()
+    end, { desc = 'Code Actions (vim.lsp)'})
+
+
     vim.keymap.set('n', '<leader>li', function()
       vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 
