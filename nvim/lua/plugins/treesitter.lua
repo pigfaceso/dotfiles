@@ -5,21 +5,22 @@ vim.pack.add({
 })
 
 local filetypes = {
-    'bash',
-    'blade',
-    'c',
-    'html',
-    'htmldjango',
-    'http',
-    'javascriptreact',
-    'latex',
-    'lua',
-    'nix',
-    'php',
-    'python',
-    'typescript',
-    'typescriptreact',
-    'vue',
+  'bash',
+  'blade',
+  'c',
+  'html',
+  'htmldjango',
+  'http',
+  'javascriptreact',
+  'latex',
+  'lua',
+  'nix',
+  'php',
+  'sql',
+  'python',
+  'typescript',
+  'typescriptreact',
+  'vue',
 }
 
 vim.api.nvim_create_autocmd('FileType', {
@@ -47,6 +48,7 @@ require('nvim-treesitter').install({
   'nix',
   'php',
   'python',
+  'sql',
   'tsx',
   'vue',
 })
