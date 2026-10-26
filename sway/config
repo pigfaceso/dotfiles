@@ -68,7 +68,7 @@ exec swayidle -w \
       xkb_layout "us,th"
       xkb_options "grp:caps_toggle"
       repeat_delay 250
-      repeat_rate 80
+      repeat_rate 60
   }
 #
 # You can also configure each device individually.
