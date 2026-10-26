@@ -46,7 +46,7 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 
 -- Indent
-vim.opt.smartindent = false
+vim.opt.smartindent = true
 
 -- List
 vim.opt.listchars = {

@@ -61,6 +61,10 @@
       "rev": "3be8cad084e79e84833ef98cef88116c26a224ff",
       "src": "https://github.com/nvim-tree/nvim-tree.lua"
     },
+    "nvim-treesitter": {
+      "rev": "a2f694478be07f89c2d03cc17858a8745a400c4b",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
     "nvim-treesitter-textobjects": {
       "rev": "5c7b0263797dfd1bd6202f2b219f3b53a80b2187",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
@@ -85,10 +89,6 @@
     "quicker": {
       "rev": "4a6883cb13fe097a20a046eb55f6dffd239276e3",
       "src": "https://github.com/stevearc/quicker.nvim"
-    },
-    "tree-sitter-manager": {
-      "rev": "06c90a3af8eb471f4a4ff979d681312284a8583a",
-      "src": "https://github.com/romus204/tree-sitter-manager.nvim"
     },
     "treesj": {
       "rev": "9f349ba62c524f065d6f43254d731ddf8319b9bf",
