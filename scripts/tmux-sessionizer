@@ -36,7 +36,7 @@ function find_dir() {
       path="$entry"
     fi
 
-    [[ -d "$path" ]] && find "$path" -mindepth 1 -maxdepth "${depth:-${MAX_DEPTH:-1}}" -path '*/.git' -prune -o -type d -print
+    [[ -d "$path" ]] && find "$path" -mindepth 1 -maxdepth "${depth:-${MAX_DEPTH:-1}}" -path '*/.git' -prune -o -path '*/*__worktrees' -prune -o -type d -print
 
   done
 }
