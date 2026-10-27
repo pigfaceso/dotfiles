@@ -13,6 +13,7 @@ M.lsp = {
   ['ts_ls'] = 'typescript-language-server',
   ['rust_analyer'] = 'rust-analyzer',
   ['laravel_lsp'] = 'laravel_lsp',
+  ['intelephense'] = 'intelephense',
 }
 
 M.linter = {
