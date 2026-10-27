@@ -15,6 +15,7 @@ ln -s $DOTFILES_DIR/bash/.bashrc $HOME
 
 # Config path
 ln -s $DOTFILES_DIR/sway $LOCAL_CONFIG_DIR
+ln -s $DOTFILES_DIR/swaylock $LOCAL_CONFIG_DIR
 ln -s $DOTFILES_DIR/waybar $LOCAL_CONFIG_DIR
 ln -s $DOTFILES_DIR/dunst $LOCAL_CONFIG_DIR
 ln -s $DOTFILES_DIR/alacritty $LOCAL_CONFIG_DIR

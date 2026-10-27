@@ -1,0 +1,6 @@
+scaling=center
+ignore-empty-password
+show-failed-attempts
+show-keyboard-layout
+indicator-idle-visible
+indicator-caps-lock

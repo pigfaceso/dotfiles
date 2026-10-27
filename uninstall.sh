@@ -15,6 +15,7 @@ unlink $HOME/.nnn
 
 # Config path
 unlink $LOCAL_CONFIG_DIR/sway
+unlink $LOCAL_CONFIG_DIR/swaylock
 unlink $LOCAL_CONFIG_DIR/waybar
 unlink $LOCAL_CONFIG_DIR/dunst
 unlink $LOCAL_CONFIG_DIR/alacritty
