@@ -27,13 +27,17 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias ls="ls --color=auto --group-directories-first"
+alias cl="clear"
 [[ -n $(command -v nvim) ]] && alias vi="nvim"
 [[ -n $(command -v nvim) ]] && alias vim="nvim"
 [[ -n $(command -v nnn) ]] && alias l="nnn"
+[[ -n $(command -v workmux) ]] && alias wm="workmux"
 
 # Prompt
 PROMPT_COMMAND='history -a; history -c; history -r'
-PS1='[\W]\[\e[2m\]$(__git_ps1 " git:(%s)")\[\e[0m\] [$?]\$ '
+PS1='[\W]\[\e[2m\]$(__git_ps1 " git:(%s)")\[\e[0m\]'
+PS1="$PS1"'\n'
+PS1="$PS1"'[$?]\$ '
 
 # Keybind
 bind '"\C-f":"tmux-sessionizer\n"'
