@@ -12,7 +12,7 @@ path=~/Music
 # Enable artist database, that provides clickable artists links in track view.
 useArtistsDb=1
 
-allowNotifications=0
+allowNotifications=1
 stripTrackNumbers=1
 hideLogo=0
 hideHelp=0
@@ -24,7 +24,7 @@ simpleTimeStatus=1
 hideFooter=0
 hideSideCover=0
 collapseTopLevel=0
-autoResume=1
+autoResume=0
 
 # Toggle animated song title, set to 0 to disable.
 titleDelay=0
