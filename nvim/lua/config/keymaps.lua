@@ -1,7 +1,7 @@
 -- Normal Mode
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Page Down' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Page Up' })
--- vim.keymap.set({'n', 'v'}, '<leader>y', '\"+y', { desc = 'Yank to clipboard' })
+vim.keymap.set({'n', 'v'}, '<leader>y', '\"+y', { desc = 'Yank to clipboard' })
 vim.keymap.set('n', '<leader>Y', 'jgg\"+yG<C-o>k', { desc = 'Yank all to clipboard' })
 vim.keymap.set({'n', 'v'}, '<leader>p', '\"+p', { desc = 'Paste after from clipboard' })
 vim.keymap.set({'n', 'v'}, '<leader>P', '\"+P', { desc = 'Paste before from clipboard' })
