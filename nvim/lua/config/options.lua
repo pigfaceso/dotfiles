@@ -74,7 +74,7 @@ vim.opt.undodir = vim.fn.stdpath("data") .. "/undo"
 vim.opt.path = ".,**,"
 
 -- Other vim.options
--- vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = 'unnamedplus'
 vim.opt.timeout = true
 vim.opt.timeoutlen = 1000
 vim.opt.ttimeoutlen = 10
