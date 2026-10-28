@@ -3,6 +3,11 @@ vim.pack.add({
 })
 
 require('lualine').setup({
+  icons_enabled = true,
+  options = {
+    section_separators = '',
+    component_separators = '',
+  },
   tabline = {
     lualine_a = {'buffers'},
     lualine_b = {},

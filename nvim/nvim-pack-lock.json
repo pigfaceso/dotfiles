@@ -5,7 +5,7 @@
       "src": "https://github.com/mgalliou/blink-cmp-tmux"
     },
     "blink-ripgrep": {
-      "rev": "be33179c6ec37fa483929f11060a6be03328ecea",
+      "rev": "73b10968ad39ff3e6fdad9aa0fe8691e8b0991fd",
       "src": "https://github.com/mikavilpas/blink-ripgrep.nvim"
     },
     "blink.cmp": {
@@ -37,6 +37,10 @@
       "rev": "277e04fad21e3af05a55cc414757b09a704f2a92",
       "src": "https://codeberg.org/andyg/leap.nvim"
     },
+    "lualine": {
+      "rev": "221ce6b2d999187044529f49da6554a92f740a96",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
     "mason": {
       "rev": "2a6940af80375532e5e9e7c1f2fc6319a1b7a69d",
       "src": "https://github.com/mason-org/mason.nvim"
@@ -54,7 +58,7 @@
       "src": "https://github.com/nvim-mini/mini.pick"
     },
     "nvim-lspconfig": {
-      "rev": "4feaba4d3980032b3f62f3ba5df4de27fdf59cfd",
+      "rev": "3bccb6fa49a3a75bfb6d92fed63b13a71a85cfaf",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-tree": {

@@ -30,7 +30,14 @@ vim.api.nvim_create_autocmd('InsertEnter', { once = true, callback = function ()
     fuzzy = { implementation = 'prefer_rust' },
     signature = { enabled = true },
     sources = {
-      default = { 'lsp', 'buffer', 'path', 'snippets', 'tmux', 'ripgrep' },
+      default = {
+        'lsp',
+        'buffer',
+        'path',
+        'snippets',
+        'tmux',
+        -- 'ripgrep',
+      },
       providers = {
         tmux = {
           module = "blink-cmp-tmux",
