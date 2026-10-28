@@ -1,0 +1,2 @@
+#!/usr/bin/sh
+magick $1 -resize 295x413^ -gravity center -extent 295x413 -units PixelsPerInch -density 300 $2

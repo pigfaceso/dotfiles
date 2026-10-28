@@ -6,6 +6,7 @@ LOCAL_BIN_DIR="$HOME/.local/bin"
 
 # Local binary/script path
 ln -s $DOTFILES_DIR/scripts/tmux-sessionizer $LOCAL_BIN_DIR
+ln -s $DOTFILES_DIR/scripts/magick-1-inch $LOCAL_BIN_DIR
 ln -s $DOTFILES_DIR/scripts/tmux-start $LOCAL_BIN_DIR
 
 # Home path
