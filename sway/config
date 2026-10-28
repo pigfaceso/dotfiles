@@ -31,6 +31,7 @@ workspace_layout tabbed
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /usr/share/wallpapers/pixel-sky.jpg fill
 
 #
 # Example configuration:
@@ -68,7 +69,7 @@ exec swayidle -w \
       xkb_layout "us,th"
       xkb_options "grp:caps_toggle"
       repeat_delay 250
-      repeat_rate 60
+      repeat_rate 40
   }
 #
 # You can also configure each device individually.

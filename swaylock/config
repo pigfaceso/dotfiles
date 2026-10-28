@@ -1,4 +1,5 @@
-scaling=center
+image=/usr/share/wallpapers/pixel-sky-blur.jpg
+scaling=fill
 ignore-empty-password
 show-failed-attempts
 show-keyboard-layout
