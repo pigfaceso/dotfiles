@@ -99,8 +99,11 @@ exec swayidle -w \
     # bindsym $mod+Shift+b bar mode toggle
     bindsym $mod+Shift+b exec pkill -SIGUSR1 waybar
 
+    # NetworkManager TUI
+    bindsym $mod+n exec alacritty --title nmtui-connect --class float-term -e nmtui-connect
+
     # Sound
-    bindsym $mod+m exec foot --title alsamixer --class float-term -e alsamixer
+    bindsym $mod+m exec alacritty --title alsamixer --class float-term -e alsamixer
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -271,13 +274,8 @@ bar swaybar_command waybar
 #     tray_bindsym button2 SecondaryActivate
 # }
 
-# Rules
-for_window [app_id="float-term"] {
-  floating enable
-  move position center
-}
-
 include /etc/sway/config.d/*
+include ~/.config/sway/config.d/*
 
 # Start app
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
