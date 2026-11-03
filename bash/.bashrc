@@ -8,9 +8,6 @@ set -o allexport
 [[ -f $HOME/.api-keys ]] && source $HOME/.api-keys
 [[ -f $HOME/.config/nnn/nnn.conf ]] && source $HOME/.config/nnn/nnn.conf
 set +o allexport
-[[ -n $(command -v direnv) ]] && eval "$(direnv hook bash)"
-[[ -n $(command -v fzf) ]] && eval "$(fzf --bash)"
-[[ -n $(command -v zoxide) ]] && eval "$(zoxide init --cmd cd bash)"
 
 # Disable Ctrl-s, Crtl-q default keybind (stop,resume)
 stty -ixon
@@ -50,6 +47,11 @@ function cd() {
 function cdi() {
   __zoxide_zi "$@" && ls
 }
+
+# Source programs
+[[ -n $(command -v fzf) ]] && eval "$(fzf --bash)"
+[[ -n $(command -v direnv) ]] && eval "$(direnv hook bash)"
+[[ -n $(command -v zoxide) ]] && eval "$(zoxide init --cmd cd bash)"
 
 # Start tmux
 if [[ -z $TMUX ]]; then
