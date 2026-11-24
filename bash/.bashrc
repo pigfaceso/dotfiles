@@ -27,8 +27,9 @@ alias ls="ls --color=auto --group-directories-first"
 alias cl="clear"
 [[ -n $(command -v nvim) ]] && alias vi="nvim"
 [[ -n $(command -v nvim) ]] && alias vim="nvim"
-[[ -n $(command -v nnn) ]] && alias l="nnn"
+[[ -n $(command -v nnn) ]] && alias n="nnn"
 [[ -n $(command -v workmux) ]] && alias wm="workmux"
+[[ -n $(command -v glow) ]] && alias glow="glow -p"
 
 # Prompt
 PROMPT_COMMAND='history -a; history -c; history -r'
@@ -38,6 +39,13 @@ PS1="$PS1"'[$?]\$ '
 
 # Keybind
 bind '"\C-f":"tmux-sessionizer\n"'
+bind -x '"\C-o":"fzf-file-widget"'
+
+# Source programs
+[[ -n $(command -v fzf) ]] && eval "$(fzf --bash)"
+[[ -n $(command -v direnv) ]] && eval "$(direnv hook bash)"
+[[ -n $(command -v zoxide) ]] && eval "$(zoxide init --cmd cd bash)"
+# [[ -n $(command -v starship) ]] && eval "$(starship init bash)"
 
 # Function
 function cd() {

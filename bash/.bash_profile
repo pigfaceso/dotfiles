@@ -22,6 +22,11 @@ export EDITOR=nvim
 export VISUAL=nvim
 export WWW_HOME="https://lite.duckduckgo.com/lite/"
 
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:toggle-preview,ctrl-y:execute-silent(echo {} | clipboard)+abort'"
+
 [[ -f $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh ]] && source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 
 # Auto-launch Sway on TTY1 login
